@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    # TODO : initialization-mode 운영 배포시 제외해야 함
+    initialization-mode: always
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/subway?useSSL=true&serverTimezone=Asia/Seoul
+    username: ssh
+  h2:
+    console:
+      enabled: true
